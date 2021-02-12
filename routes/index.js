@@ -9,7 +9,7 @@ router.use('/messages', NotificationsRoute.router);
 
 const emitEvent = (eventName, ...args) => {
     validListeners.forEach(listener => {
-        if(listener.validEvents[eventName] && typeof listener.validEvents[eventName] === 'function') {
+        if(listener.validEvents && listener.validEvents[eventName] && typeof listener.validEvents[eventName] === 'function') {
             listener.validEvents[eventName](...args);
         }
     })
