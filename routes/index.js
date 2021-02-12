@@ -1,11 +1,11 @@
 const express = require('express');
-const SocketRouter = require('./socket.js');
+const NotificationsRoute = require('./notifications.js');
 
 const router = express.Router();
 
-const validListeners = [SocketRouter];
+const validListeners = [NotificationsRoute];
 
-router.use('/socket', SocketRouter.router);
+router.use('/messages', NotificationsRoute.router);
 
 const emitEvent = (eventName, ...args) => {
     validListeners.forEach(listener => {

@@ -1,13 +1,12 @@
 const express = require('express');
 
-const User = require('../models/User');
-
 const router = express.Router();
 
-router.get('/', (req, res) => res.send('This is the route for the default socket.'));
+router.get('/', (req, res) => res.send('This is the route for the notifications socket.'));
 
 // Socket events
 const validEvents = {
+    // Create object methods named by the socket event name you want to listen to
     'ready': (socket, ...args) => {
         if(socket.validatedUser === null)
             socket.emit('notification', 'User is not valid.');

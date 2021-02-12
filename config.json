@@ -1,4 +1,6 @@
 {
     "port": 3000,
-    "exposeSocketIOFile": false
+    "exposeSocketIOFile": false,
+    "allowedOrigin": "*",
+    "WSPath": "/socket" 
 }

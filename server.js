@@ -13,18 +13,19 @@ const AppConfig = require('./config.json');
 const RootRouter = require('./routes/');
 
 
+// Security middleware
 app.use(cors());
 app.use(helmet());
 
 const io = require('socket.io')(http, {
-    path: '/',
+    path: AppConfig.WSPath,
     serveClient: AppConfig.exposeSocketIOFile,
     pingInterval: 10000,
     pingTimeout: 5000,
     cookie: false,
 
     cors: {
-        origin: '*'
+        origin: AppConfig.allowedOrigin
     }
 });
 

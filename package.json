@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Petre-Gabriel/ragemp-live-notifications.git"
+    "url": "git+https://github.com/Petre-Gabriel/live-notifications.git"
   },
   "author": "Petre Gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Petre-Gabriel/ragemp-live-notifications/issues"
+    "url": "https://github.com/Petre-Gabriel/live-notifications/issues"
   },
-  "homepage": "https://github.com/Petre-Gabriel/ragemp-live-notifications#readme",
+  "homepage": "https://github.com/Petre-Gabriel/live-notifications#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
